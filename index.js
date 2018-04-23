@@ -15,3 +15,5 @@ function secToHours(sec){
 	console.log( `Result: ${h}:${seroPad(m)}:${seroPad(s)}` );
 
 }
+
+module.exports = secToHours;
