@@ -4,7 +4,7 @@ module.exports =  function secToHours(sec){
 	let m = m_full - h*60;
 	let s = sec - m_full*60;
 
-	let seroPad = function(val){
+	let zeroPad = function(val){
 		return String(val).length===1 ? ('0'+val) : val;
 	};
 
@@ -14,5 +14,5 @@ module.exports =  function secToHours(sec){
 	// console.log( `кол-во секунд: ${sec}сек - ${m_full}мин (${m_full*60}сек) = ${sec - m_full*60}` );
 	// console.log( `Result: ${h}:${seroPad(m)}:${seroPad(s)}` );
 
-	return `${h}:${seroPad(m)}:${seroPad(s)}`;
+	return `${h}:${zeroPad(m)}:${zeroPad(s)}`;
 };
