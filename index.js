@@ -5,7 +5,7 @@ module.exports =  function secToHours(sec){
 	let s = sec - m_full*60;
 
 	let zeroPad = function(val){
-		return String(val).length===1 ? ('0'+val) : val;
+		return val ? String(val/100).split('.')[1] : '00';
 	};
 
 	return `${zeroPad(h)}:${zeroPad(m)}:${zeroPad(s)}`;
